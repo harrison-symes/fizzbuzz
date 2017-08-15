@@ -1,16 +1,16 @@
-for (var i = 0; i <= 30; i++) {
-  if (i % 3 == 0 && i % 5 == 0) console.log('fizz-buzz');
-  else if (i % 3 == 0) console.log('fizz');
-  else if (i % 5 == 0) console.log('buzz');
-  else console.log(i)
+for (var i = 1; i <= 30; i++) {
+  var answer = solveAnswer(i)
+  console.log(answer);
 }
 
-var i = 0;
-
-while (i <= 30) {
-  if (i % 3 == 0 && i % 5 == 0) console.log('fizz-buzz');
-  else if (i % 3 == 0) console.log('fizz');
-  else if (i % 5 == 0) console.log('buzz');
-  else console.log(i)
-  i = i + 1
+function solveAnswer (number) {
+  var divisble3 = i % 3 == 0
+  var divisible5 = i % 5 == 0
+  if (divisble3 && divisible5) {
+    return 'fizz buzz'
+  } else if (divisble3) {
+    return 'fizz'
+  } else if (divisible5) {
+    return 'buzz'
+  } else return number
 }
